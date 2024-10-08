@@ -11,6 +11,7 @@ from util.io import load_ckpt
 parser = argparse.ArgumentParser()
 # training options
 parser.add_argument('--root', type=str, default='./data')
+parser.add_argument('--mask_root', type=str, default='./masks')
 parser.add_argument('--snapshot', type=str, default='')
 parser.add_argument('--image_size', type=int, default=256)
 args = parser.parse_args()
