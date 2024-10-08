@@ -17,8 +17,9 @@ class Places2(torch.utils.data.Dataset):
                               recursive=True)
         else:
             tmp_paths = glob('{:s}/*.jpg'.format(img_root))
+            self.paths = []
             for _ in range(50):
-                self.paths += random.choice(tmp_paths)
+                self.paths.append(random.choice(tmp_paths))
 
         self.mask_paths = glob('{:s}/*.jpg'.format(mask_root))
         self.N_mask = len(self.mask_paths)
